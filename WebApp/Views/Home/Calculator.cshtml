@@ -1,8 +1,8 @@
 ﻿@model dynamic
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Calculator";
     Layout = "_Layout";
 }
-
-<h2>Calculator</h2>
+<h2>@ViewBag.Title</h2>
+<h2>Wynik Obliczeń: @ViewBag.x @ViewBag.Operator @ViewBag.y = @ViewBag.result</h2>
