@@ -11,6 +11,10 @@ public class HomeController : Controller
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
+        
+        /*
+         * Napisz metodę Age, która przyjmije parametr z datą urodzin i wyświetla wiek w latach, miesiącach i dnia.
+         */
     }
 
     public IActionResult Index()
@@ -28,7 +32,7 @@ public class HomeController : Controller
         return View();
     }
     
-    public IActionResult Calculator( string op, double? x, double? y)
+    public IActionResult Calculator( Operator? op, double? x, double? y)
     {
         // var op = Request.Query["op"];
         // var x = double.Parse(Request.Query["x"]);
@@ -39,23 +43,30 @@ public class HomeController : Controller
             ViewBag.ErrorMessage = "Please fill all values";
             return View("CalculatorError");
         }
+
+        if (op is null)
+        {
+            ViewBag.ErrorMessage = "Invalid operation";
+            return View("CalculatorError");
+        }
+        
         
         double? result = 0.0d;
         switch(op)
         {
-            case "add":
+            case Operator.Add:
                 result = x + y;
                 ViewBag.Operator = "+";
                 break;
-            case "sub":
+            case Operator.Sub:
                 result = x - y;
                 ViewBag.Operator = "-";
                 break;
-            case "mul":
+            case Operator.Mul:
                 result = x * y;
                 ViewBag.Operator = "*";
                 break;
-            case "div":
+            case Operator.Div:
                 result = x / y;
                 ViewBag.Operator = ":";
                 break;
@@ -73,3 +84,9 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
+
+public enum Operator
+{
+    Add, Sub, Mul, Div
+}
+
