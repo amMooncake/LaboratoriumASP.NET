@@ -76,6 +76,40 @@ public class HomeController : Controller
         ViewBag.y = y;
         return View();
     }
+
+    public IActionResult Age(DateTime birthDate)
+    {  
+        DateTime currentDate = DateTime.Now;
+        
+        int years = currentDate.Year - birthDate.Year;
+        int months = currentDate.Month - birthDate.Month;
+        int days = currentDate.Day - birthDate.Day;
+        if (days < 0)
+        {
+            months--;
+            days += DateTime.DaysInMonth(currentDate.AddMonths(-1).Year, currentDate.AddMonths(-1).Month);;
+        }
+        
+        if (months < 0)
+        {
+            years--;
+            months += 12;
+        }
+
+        if (birthDate >= DateTime.Now)
+        {
+            ViewBag.Years = 0; ViewBag.Months = 0; ViewBag.Days = 0;
+        }
+        else
+        {
+            ViewBag.Years = years;
+            ViewBag.Months = months;
+            ViewBag.Days = days;
+        }
+        
+        
+        return View();
+    }
     
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

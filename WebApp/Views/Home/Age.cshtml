@@ -1,0 +1,20 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Age Calculator";
+    Layout = "_Layout";
+}
+
+@* <h2>@ViewBag.Title</h2> *@
+<h2>Oblicz wiek</h2>
+
+<form asp-action="Age" method="post">
+    <label for="birthDate">Podaj datę urodzin:</label>
+    <input type="date" id="birthDate" name="birthDate" placeholder="dd.mm.rrrr" required />
+
+    <button type="submit">Oblicz wiek</button>
+</form>
+
+<p>Wiek w latach: @ViewBag.Years</p>
+<p>Wiek w miesiącach: @ViewBag.Months</p>
+<p>Wiek w dniach: @ViewBag.Days</p>
