@@ -8,8 +8,14 @@
                     <input class="form-control" type="number" name="x" step="0.00001" id="x"/>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="operator">Operator</label>
-                    <input class="form-control" type="text" name="op" id="operator"/>
+                    <select name="op">
+                        <option value="add">+</option>
+                        <option value="sub">&minus;</option>
+                        <option value="mul">&times;</option>
+                        <option value="div">&divide;</option>
+                    </select>
+                    @* <label class="form-label" for="operator">Operator</label> *@
+                    @* <input class="form-control" type="text" name="op" id="operator"/> *@
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="y">Liczba 2</label>
