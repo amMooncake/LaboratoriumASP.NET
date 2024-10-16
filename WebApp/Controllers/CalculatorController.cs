@@ -15,42 +15,43 @@ public class CalculatorController : Controller
         return View();
     }
     
-    public IActionResult Result(string op, double? x, double? y)
+    public IActionResult Result(Operators? op, double? x, double? y)
     {
-        //
+        
         // var op = Request.Query["op"];
         // var x = double.Parse(Request.Query["x"]);
         // var y = double.Parse(Request.Query["y"]);
 
-        // if (x == null || y == null)
-        // {
-        //     ViewBag.ErrorMessage = "Please fill all values";
-        //     return View("CalculatorError");
-        // }
-        //
-        // if (op is null)
-        // {
-        //     ViewBag.ErrorMessage = "Invalid operation";
-        //     return View("CalculatorError");
-        // }
-        //
+        if (x == null || y == null)
+        {
+            ViewBag.ErrorMessage = "Please fill all values";
+            return View("CalculatorError");
+        }
+
+        Console.WriteLine(op);
+        if (op is null)
+        {
+            ViewBag.ErrorMessage = "Invalid operation";
+            return View("CalculatorError");
+        }
+        
         
         double? result = 0.0d;
         switch(op)
         {
-            case "+":
+            case Operators.Add:
                 result = x + y;
                 ViewBag.Operator = "+";
                 break;
-            case "-":
+            case Operators.Sub:
                 result = x - y;
                 ViewBag.Operator = "-";
                 break;
-            case "*":
+            case Operators.Mul:
                 result = x * y;
                 ViewBag.Operator = "*";
                 break;
-            case "/":
+            case Operators.Div:
                 result = x / y;
                 ViewBag.Operator = ":";
                 break;
@@ -61,5 +62,11 @@ public class CalculatorController : Controller
         return View();
     }
     
+    
 }
 
+
+public enum Operators
+{
+    Add, Sub, Mul, Div
+}
