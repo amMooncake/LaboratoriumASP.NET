@@ -9,7 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc3e6ac5-e0dc-48e7-8fc4-a866fcaaf015" name="Changes" comment="" />
+    <list default="true" id="cc3e6ac5-e0dc-48e7-8fc4-a866fcaaf015" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LaboratoriumASP.NET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LaboratoriumASP.NET/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Controllers/ContactController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Controllers/ContactController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/Contact/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Contact/Details.cshtml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,9 +67,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.WebApp: http.executor": "Run",
+    ".NET Launch Settings Profile.WebApp: http.executor": "Debug",
     ".NET Launch Settings Profile.WebApp: https.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "lab3",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -138,6 +143,7 @@
       <workItem from="1729585553200" duration="603000" />
       <workItem from="1729586517120" duration="8284000" />
       <workItem from="1729673362247" duration="5201000" />
+      <workItem from="1729787357802" duration="482000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -272,6 +278,6 @@
     <MESSAGE value="bug fixes and select" />
     <MESSAGE value="Post method to calculator added" />
     <MESSAGE value="add birth calculator" />
-    <option name="LAST_COMMIT_MESSAGE" value="add birth calculator" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

@@ -93,4 +93,9 @@ public class ContactController : Controller
         
         return View(_contacts[id]);
     }
+
+    public IActionResult Back()
+    {
+        return View("Index", _contacts);
+    }
 }
