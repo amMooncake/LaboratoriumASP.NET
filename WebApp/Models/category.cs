@@ -1,5 +1,7 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+
 namespace WebApp.Models;
+
 public enum Category
 {
     [Display(Name = "Rodzina",Order = 1)]

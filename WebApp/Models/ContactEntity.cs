@@ -1,15 +1,13 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace WebApp.Models;
 
-[Table("contact")]
+[Table("Contacts")]
 public class ContactEntity
 {
     [Key]
-    public int Id { get; set; }
-    
+    public int Id{ get; set; }
     [Required]
     [MaxLength(length: 20)]
     public string FirstName { get; set; }
@@ -20,12 +18,17 @@ public class ContactEntity
     
     public string Email { get; set; }
     
-    [Column("number")]
-    public string PhoneNumber { get; set; }
+    [Column("Phone")]
+    public string phoneNumber { get; set; }
     
-    public DateOnly BirthDate { get; set; }
+    public DateOnly Birthday { get; set; }
     
     public Category Category { get; set; }
     
     public DateTime Created { get; set; }
+    
+    public int OrganizationId { get; set; }
+
+    public OrganizationEntity? Organization { get; set; }
+
 }

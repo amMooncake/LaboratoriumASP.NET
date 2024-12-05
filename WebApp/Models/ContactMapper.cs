@@ -1,4 +1,4 @@
-namespace WebApp.Models;
+﻿namespace WebApp.Models;
 
 public class ContactMapper
 {
@@ -9,10 +9,12 @@ public class ContactMapper
             Id = model.Id,
             FirstName = model.FirstName,
             LastName = model.LastName,
-            BirthDate = model.BirthDate,
+            phoneNumber = model.phoneNumber,
             Email = model.Email,
-            PhoneNumber = model.PhoneNumber,
+            Birthday = model.Birthday,
             Category = model.Category,
+            Organization = model.Organization,
+            OrganizationId = model.OrganizationId,
         };
     }
 
@@ -23,10 +25,12 @@ public class ContactMapper
             Id = model.Id,
             FirstName = model.FirstName,
             LastName = model.LastName,
-            BirthDate = model.BirthDate,
+            phoneNumber = model.phoneNumber,
             Email = model.Email,
-            PhoneNumber = model.PhoneNumber,
+            Birthday = model.Birthday,
             Category = model.Category,
+            Organization = model.Organization,
+            OrganizationId = model.OrganizationId,
         };
     }
 }

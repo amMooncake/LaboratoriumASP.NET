@@ -1,5 +1,6 @@
 using WebApp.Models;
 using WebApp.Models.Services;
+
 namespace WebApp;
 
 public class Program
@@ -12,10 +13,9 @@ public class Program
         builder.Services.AddControllersWithViews();
         builder.Services.AddDbContext<AppDbContext>();
         builder.Services.AddTransient<IContactService, EFContactService>();
-        
         //Skojarzenie MemoryContactService z interfejsem, tworzenie jednej instancji
-
-        builder.Services.AddSingleton<IContactService, MemoryContactService>();
+        
+    
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.

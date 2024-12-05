@@ -1,4 +1,5 @@
-namespace WebApp.Models.Services;
+﻿namespace WebApp.Models.Services;
+
 public interface IContactService
 {
     void Add(ContactModel contact);
@@ -6,4 +7,6 @@ public interface IContactService
     void Delete(int id);
     List<ContactModel> GetAll();
     ContactModel? GetById(int id);
+    
+    List<OrganizationEntity> GetAllOrganizations();
 }
